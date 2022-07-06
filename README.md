@@ -1,15 +1,14 @@
-# Basic Sample Hardhat Project
+# Solidity Project with Data Feeds and Oracles from Chaninlink
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project shows how to use Solidity to fetch data from an Oracle into a onchain smart contract.
 
-Try running some of the following tasks:
+The underlying concept is how smart contracts and chainlink data feeds interact.
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+## Key Concepts Applied
+
+- Data Feeds and Fetching External Data
+- Reentrancy Check
+- Smart Contract Ownership
+- Decimals in Smart Contracts
+- Using Hardhatt and deploying on a testnet
+- Using library...for
