@@ -60,13 +60,17 @@ export const ContextProvider = ({ children }) => {
     }
   }
 
+  // fund the contract
+
   // withdraw all money from the contract
   const withdrawAll = async () => {
     try {
       if (!isConnected) {
         alert("Connect to Metamask!");
       } else {
-        const tx = await contract.withdraw();
+        const tx = await contract.withdraw({
+          gasLimit: 3e7,
+        });
         console.log(tx);
       }
     } catch (error) {
