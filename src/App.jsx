@@ -10,13 +10,24 @@
     * - Author          : Michael
     * - Modification    : 
 **/
-import Counter from './components/Counter'
+
+import Home from "./components/Home";
+import { ContextProvider } from "./context/Context";
 
 function App() {
+
   return (
-    <div>
-      <Counter />
-    </div>
+    <>
+      <ContextProvider>
+        <div>
+
+          <Home />
+
+        </div>
+
+      </ContextProvider>
+    </>
+
   )
 }
 export default App;
