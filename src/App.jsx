@@ -11,6 +11,7 @@
     * - Modification    : 
 **/
 
+import FundAndWithdraw from "./components/FundAndWithdraw";
 import Home from "./components/Home";
 import { ContextProvider } from "./context/Context";
 
@@ -19,9 +20,10 @@ function App() {
   return (
     <>
       <ContextProvider>
-        <div>
+        <div className="m-40">
 
           <Home />
+          <FundAndWithdraw />
 
         </div>
 
