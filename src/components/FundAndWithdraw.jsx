@@ -10,9 +10,14 @@
     * - Author          : Michael
     * - Modification    : 
 **/
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../context/Context';
 
 const FundAndWithdraw = () => {
+
+	const { withdrawAll } = useContext(Context);
+
+
 	return (
 		<div className='flex justify-center mt-10 w-full'>
 
@@ -21,7 +26,7 @@ const FundAndWithdraw = () => {
 				<p className='text-xs'> Fund</p>
 			</button>
 
-			<button type="button" class="py-2 px-4 w-1/5 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+			<button onClick={withdrawAll} type="button" class="py-2 px-4 w-1/5 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
 				<p className='text-xs'> Withdraw</p>
 			</button>
 

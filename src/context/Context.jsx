@@ -60,6 +60,20 @@ export const ContextProvider = ({ children }) => {
     }
   }
 
-  return (<Context.Provider value={{ isConnected, buttonConnectText, account, connectWallet }}>{children}</Context.Provider>);
+  // withdraw all money from the contract
+  const withdrawAll = async () => {
+    try {
+      if (!isConnected) {
+        alert("Connect to Metamask!");
+      } else {
+        const tx = await contract.withdraw();
+        console.log(tx);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return (<Context.Provider value={{ isConnected, buttonConnectText, account, connectWallet, withdrawAll }}>{children}</Context.Provider>);
 };
 
