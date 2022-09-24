@@ -18,4 +18,10 @@ This interaction is enabled by the frontend components.
 - Using Hardhatt and deploying on a testnet
 - Using library...for
 
+
+## Preview
+
+![preview](https://elmerlar.sirv.com/Screenshot%20(122).png)
+![preview](https://elmerlar.sirv.com/Screenshot%20(123).png)
+
 Check out the [main](https://github.com/masiedu4/full-stack-React-Solidity-Oracles-project/tree/main) branch for the frontend part of this project and [master](https://github.com/masiedu4/full-stack-React-Solidity-Oracles-project/tree/master) for the smart contract logic.
