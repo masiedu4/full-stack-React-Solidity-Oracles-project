@@ -30,6 +30,10 @@ export const ContextProvider = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false);
   const [account, setAccount] = useState("Click to connect!");
   const [buttonConnectText, setButtonConnectText] = useState("Connect Wallet");
+  // state to manage where user enters ether value
+  const [formData, setFormData] = useState({
+    amount: ""
+  })
 
 
 
@@ -61,6 +65,27 @@ export const ContextProvider = ({ children }) => {
   }
 
   // fund the contract
+
+  const fund = async () => {
+    const { amount } = formData;
+    const parsedEth = ethers.utils.parseEther(amount)
+    try {
+      if (!window.etherem) {
+        alert("Please Install Metamask")
+        return;
+      } else {
+        await ethereum.request({
+          method: "eth_sendTransaction",
+          value: parsedEth._hex,
+          gas: '0x5208', // 21000 gwei
+        })
+
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
 
   // withdraw all money from the contract
   const withdrawAll = async () => {
