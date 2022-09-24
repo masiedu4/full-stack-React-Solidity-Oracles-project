@@ -1,8 +1,18 @@
 # Solidity Project with Data Feeds and Oracles from Chaninlink
 
-This project shows how to use Solidity to fetch data from an Oracle into a onchain smart contract.
+The smart contract interacts with outside world via chainlink data feeds. It goes an extra mile to ensure that the right amounts are deposited by each tranaction.
 
-The underlying concept is how smart contracts and chainlink data feeds interact.
+The underlying concept is in how smart contracts and software oracles communicate
+
+
+## Tools Used
+
+- Solidity
+- Hardhat
+- Ethers.js
+- Alchemy
+- Rinkeby Testnet
+- Deployed on Polygon Mumbai
 
 ## Key Concepts Applied
 
@@ -12,3 +22,5 @@ The underlying concept is how smart contracts and chainlink data feeds interact.
 - Decimals in Smart Contracts
 - Using Hardhatt and deploying on a testnet
 - Using library...for
+
+Check out the [main](https://github.com/masiedu4/full-stack-React-Solidity-Oracles-project/tree/main) branch for the frontend part of this project.
